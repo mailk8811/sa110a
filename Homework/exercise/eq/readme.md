@@ -1,10 +1,10 @@
-# eq - 傳統方式:先寫程式再寫測試   
-## 一、程式  
-1. 功能 
+# 傳統方式:先寫程式再寫測試   
+## eq 
+一、功能 
 ``` 
 Performs a SameValueZero comparison between two values to determine if they are equivalent.  
 ```  
-2. 寫程式  
+二、寫程式  
 ```
 export function eq(a, b) {
     if (Number.isNaN(a) && Number.isNaN(b)){return true}
@@ -12,7 +12,7 @@ export function eq(a, b) {
     else return true
   }
 ```  
-3. 寫測試程式  
+三、寫測試程式  
 ```
 import _ from '../src/mod.js'
 import{assert}from "https://deno.land/std@0.63.0/testing/asserts.ts";
@@ -44,7 +44,7 @@ Deno.test("eq test", () => {
 ```  
 
 
-## 二、測試結果
+四、測試結果
 ```
 Check file:///Users/malik8811/Desktop/110/sa110a/Homework/exercise/test/eq_test.js
 (base) malik8811@chenkaimingde-MacBook-Pro test % deno test eq_test.js
