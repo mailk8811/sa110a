@@ -17,8 +17,6 @@ print("multiply(8, 7) = {}".format(multiply(8, 7)))
 ```
 三、寫程式
 ```
-#Multiply two numbers.
-
 def multiply(multiplier, multiplicand):
     return multiplier * multiplicand
 ```
