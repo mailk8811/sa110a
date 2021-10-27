@@ -44,3 +44,4 @@ while True:
 ## 重要文獻參考資料  
 <a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6">[1]密碼學-基百科</a>   
 <a href="https://www.itsfun.com.tw/%E5%AF%86%E7%A2%BC%E5%AD%B8/wiki-9575575-3900455">[2]套用密碼學基礎(作者: 張益發,趙亞群,張習勇,張鐸)</a>
+<a href="https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/">[3]凱薩密碼原始碼</a>
