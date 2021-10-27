@@ -18,7 +18,7 @@
 ``` 
 <hr>   
 
-## 三、凱薩加密法
+## 三、凱薩密碼
 &emsp;&emsp;凱薩加密法稍微複雜一點，但也是非常容易破解的，其通過排列明文和密文字母表，密文字母通過將明文字母表向左或右移動固定數目的位置。或者先將字母用0~25代替，然後加密(x+n)mod26，解密即為(x-n)mod26。    
 <div align="center"><img src="https://github.com/mailk8811/sa110a/blob/master/pic/1.jpeg"></div>   
 
@@ -64,6 +64,43 @@ Please input plaintext or ciphertext:
 guv6Jv6Jz!J6rp5r7Jzr66ntrM
 
 The result is: This is my secret message.
+```  
+### （二）Python 對凱薩密碼的爆破  
+原始碼： 
+```
+symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
+
+ciphertext = input("Please input ciphertext:\n")
+
+
+for key in range(len(symbols)):
+    ciphers = symbols[key:] + symbols[:key]
+    transtab = str.maketrans(ciphers, symbols)
+    plaintext = ciphertext.translate(transtab)
+
+    print(f'Key #{key}: {plaintext}'
+```
+運行結果：  
+```
+Please input ciphertext:
+guv6Jv6Jz!J6rp5r7Jzr66ntrM
+Key #0: guv6Jv6Jz!J6rp5r7Jzr66ntrM
+Key #1: ftu5Iu5Iy I5qo4q6Iyq55msqL
+Key #2: est4Ht4Hx0H4pn3p5Hxp44lrpK
+Key #3: drs3Gs3Gw9G3om2o4Gwo33kqoJ
+Key #4: cqr2Fr2Fv8F2nl1n3Fvn22jpnI
+Key #5: bpq1Eq1Eu7E1mkzm2Eum11iomH
+Key #6: aopzDpzDt6Dzljyl1DtlzzhnlG
+Key #7: ZnoyCoyCs5CykixkzCskyygmkF
+Key #8: YmnxBnxBr4BxjhwjyBrjxxfljE
+Key #9: XlmwAmwAq3AwigvixAqiwwekiD
+Key #10: Wklv.lv.p2.vhfuhw.phvvdjhC
+Key #11: Vjku?ku?o1?ugetgv?oguucigB
+Key #12: Uijt!jt!nz!tfdsfu!nfttbhfA
+Key #13: This is my secret message.
+Key #14: Sghr0hr0lx0rdbqds0ldrrZfd?
+Key #15: Rfgq9gq9kw9qcapcr9kcqqYec!
+...
 ```
 <hr>   
 
