@@ -113,8 +113,7 @@ Key #15: Rfgq9gq9kw9qcapcr9kcqqYec!
 &emsp;&emsp;密碼學是研究編制密碼和破解密碼的技術學門。研究密碼變化的客觀規律，應用於編制密碼以保守通訊秘密的，成為編碼學；應用於破解密碼以獲取通訊情報的，稱為破譯學，總稱密碼學。  
 <hr>   
  
-## 重要文獻參考資料  
-<a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6">[1]密碼學-基百科</a>   
-<a href="https://www.itsfun.com.tw/%E5%AF%86%E7%A2%BC%E5%AD%B8/wiki-9575575-3900455">[2]套用密碼學基礎(作者: 張益發,趙亞群,張習勇,張鐸)</a>  
-<a href="https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/">[3]凱薩密碼原始碼</a>  
-[[1]凱薩密碼](https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/)
+## 重要文獻參考資料   
+[[1]密碼學-維基百科](https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/) 
+[[2]套用密碼學基礎(作者: 張益發,趙亞群,張習勇,張鐸)](https://www.itsfun.com.tw/%E5%AF%86%E7%A2%BC%E5%AD%B8/wiki-9575575-3900455) 
+[[3]凱薩密碼](https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/)
