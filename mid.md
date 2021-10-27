@@ -18,6 +18,23 @@
 ``` 
 <hr>   
 
+## 二、反向密碼  
+&emsp;&emsp;反向密碼使用的是一種反轉纯文本字符串的方式來轉換為密文，其加密和解密的過程是相同的，要解密密文，用戶僅需反轉密文即可獲得純文本。  
+###（一）Python 實現反向密碼  
+原始碼：  
+```
+message = 'What's the secret?'
+translated = ''
+i = len(message) - 1
+while i >= 0:
+print(translated)
+    translated = translated + message[i]
+    i = i - 1 
+ ```  
+運行結果：  
+```
+?terces eht s'tahW
+```  
 ## 三、凱薩密碼
 &emsp;&emsp;凱薩加密法稍微複雜一點，但也是非常容易破解的，其通過排列明文和密文字母表，密文字母通過將明文字母表向左或右移動固定數目的位置。或者先將字母用0~25代替，然後加密(x+n)mod26，解密即為(x-n)mod26。    
 <div align="center"><img src="https://github.com/mailk8811/sa110a/blob/master/pic/1.jpeg"></div>  
@@ -109,7 +126,7 @@ Key #15: Rfgq9gq9kw9qcapcr9kcqqYec!
 ```
 <hr>   
 
-## 四、什麼是密碼學
+## 四、換位加密法
 &emsp;&emsp;密碼學是研究編制密碼和破解密碼的技術學門。研究密碼變化的客觀規律，應用於編制密碼以保守通訊秘密的，成為編碼學；應用於破解密碼以獲取通訊情報的，稱為破譯學，總稱密碼學。  
 <hr>   
  
