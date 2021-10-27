@@ -35,6 +35,8 @@ print(translated)
 ```
 ?terces eht s'tahW
 ```  
+---
+
 ## 三、凱薩密碼
 &emsp;&emsp;凱薩加密法稍微複雜一點，但也是非常容易破解的，其通過排列明文和密文字母表，密文字母通過將明文字母表向左或右移動固定數目的位置。或者先將字母用0~25代替，然後加密(x+n)mod26，解密即為(x-n)mod26。    
 <div align="center"><img src="https://github.com/mailk8811/sa110a/blob/master/pic/1.jpeg"></div>  
@@ -124,7 +126,7 @@ Key #14: Sghr0hr0lx0rdbqds0ldrrZfd?
 Key #15: Rfgq9gq9kw9qcapcr9kcqqYec!
 ...
 ```
-<hr>   
+---   
 
 ## 四、換位加密法
 &emsp;&emsp;密碼學是研究編制密碼和破解密碼的技術學門。研究密碼變化的客觀規律，應用於編制密碼以保守通訊秘密的，成為編碼學；應用於破解密碼以獲取通訊情報的，稱為破譯學，總稱密碼學。  
