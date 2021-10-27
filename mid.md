@@ -25,6 +25,7 @@
 while True:
  key = input("Please input a key number (like 13):\n") or 13
  mode = input("\nPlease input mode (encrypt or decrypt):\n") or "encrypt"
+ 
  symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
  # 根據數字 key 對字母表 symbols 進行偏移操作，形成密文字母表 ciphers
  ciphers = symbols[int(key):] + symbols[:int(key)]
@@ -32,8 +33,34 @@ while True:
  transtab = str.maketrans(symbols,ciphers) if mode == 'encrypt' else str.maketrans(ciphers,symbols)
  message = input("\nPlease input plaintext or ciphertext:\n")
  # 完成明文到密文（或密文到明文）的轉換
+ 
  result = message.translate(transtab)
  print(f"\nThe result is: {result}\n\n")
+```  
+運行結果：  
+```
+Please input a key number (like 13):
+13
+
+Please input mode (encrypt or decrypt):
+encrypt
+
+Please input plaintext or ciphertext:
+This is my secret message.
+
+The result is: guv6Jv6Jz!J6rp5r7Jzr66ntrM
+
+
+Please input a key number (like 13):
+13
+
+Please input mode (encrypt or decrypt):
+decrypt
+
+Please input plaintext or ciphertext:
+guv6Jv6Jz!J6rp5r7Jzr66ntrM
+
+The result is: This is my secret message.
 ```
 <hr>   
 
@@ -43,5 +70,5 @@ while True:
  
 ## 重要文獻參考資料  
 <a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6">[1]密碼學-基百科</a>   
-<a href="https://www.itsfun.com.tw/%E5%AF%86%E7%A2%BC%E5%AD%B8/wiki-9575575-3900455">[2]套用密碼學基礎(作者: 張益發,趙亞群,張習勇,張鐸)</a>
+<a href="https://www.itsfun.com.tw/%E5%AF%86%E7%A2%BC%E5%AD%B8/wiki-9575575-3900455">[2]套用密碼學基礎(作者: 張益發,趙亞群,張習勇,張鐸)</a>  
 <a href="https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/">[3]凱薩密碼原始碼</a>
