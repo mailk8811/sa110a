@@ -135,7 +135,51 @@ Key #15: Rfgq9gq9kw9qcapcr9kcqqYec!
 
 ## 四、換位加密法
 &emsp;&emsp;密碼學是研究編制密碼和破解密碼的技術學門。研究密碼變化的客觀規律，應用於編制密碼以保守通訊秘密的，成為編碼學；應用於破解密碼以獲取通訊情報的，稱為破譯學，總稱密碼學。  
-<hr>   
+### （一）Python 實現換位加密  
+程式碼：
+
+```
+import  math
+def     transpostionEncrypt(msg,key):#加密
+        size = len(msg)
+        result = []
+        for i in range(key):
+            t = i
+            while t<size:
+                result.append(msg[t])
+                t+=key
+        return ''.join(result)
+def     transpostionDecrypt(msg,key):#解密
+        numOfColums = int(math.ceil(len(msg)/float(key)))
+        numOfRows = key
+        sharedBox = numOfColums*numOfRows - len(msg)
+        row = 0
+        col = 0
+        result = ['']*numOfColums
+        for i in msg:
+            result[col] += i
+            col+=1
+            if col==numOfColums or (col==numOfColums-1 and row>=numOfRows-sharedBox):
+                col=0
+                row+=1
+        return ''.join(result)
+
+def     main():
+
+        cipher = transpostionEncrypt("Common sense is not so common.",8)
+        print cipher#密文
+
+        print transpostionDecrypt(cipher,8)
+if      __name__=="__main__":
+        main()
+```  
+執行結果：  
+
+```
+Cenoonommstmme oo snnio. s s c
+Common sense is not so common.
+```
+---  
  
 ## 重要文獻參考資料   
 [[1]密碼學-維基百科](https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/)  
