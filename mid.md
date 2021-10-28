@@ -240,3 +240,4 @@ Transposition Cipher
 [[1]密碼學-維基百科](https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/)  
 [[2]套用密碼學基礎(作者: 張益發,趙亞群,張習勇,張鐸)](https://www.itsfun.com.tw/%E5%AF%86%E7%A2%BC%E5%AD%B8/wiki-9575575-3900455)  
 [[3]凱薩密碼](https://www.starky.ltd/2020/08/05/python-cryptography-caesar-cipher/)  
+[[4]換位加密](https://blog.csdn.net/weixin_42394170/article/details/109490468)
